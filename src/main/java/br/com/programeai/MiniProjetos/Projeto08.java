@@ -17,9 +17,11 @@ public class Projeto08 {
         String password = input.nextLine();
 
         int opcaoSelecionada;
-        if (user.equalsIgnoreCase("HIGOR") && password.equals("123")) {
+        if (user.equalsIgnoreCase("LEANDRO") && password.equals("123")) {
+            System.out.println("");
             System.out.println("User logado com sucesso!");
             System.out.println("Bem vindo " + user);
+            System.out.println("");
 
             System.out.println("[1] - Adicionar Produto");
             System.out.println("[2] - Listar Produto");
@@ -32,21 +34,26 @@ public class Projeto08 {
 
             System.out.println("Digite uma opcao: ");
             opcaoSelecionada = input.nextInt();
+
+            switch (opcaoSelecionada) {
+                case 1:
+                    System.out.println("Adicionar Produto");
+                    break;
+                case 2:
+                    System.out.println("Listar Produto");
+                    break;
+                case 3:
+                    System.out.println("Realizar Pagamento");
+                    break;
+                case 4:
+                    System.out.println("Adicionar Produto");
+                    break;
+                default:
+                    System.out.println("Cadastrar Cliente");
+            }
         } else {
             System.out.println("Credenciais invalidas");
             return;
-        }
-
-        if (opcaoSelecionada == 1) {
-            System.out.println("Opcao selecionada: Adicionar Produto");
-        } else if (opcaoSelecionada == 2) {
-            System.out.println("Opcao selecionada: Listar Produto");
-        } else if (opcaoSelecionada == 3) {
-            System.out.println("Opcao selecionada: Realizar Pagamento");
-        } else if (opcaoSelecionada == 4) {
-            System.out.println("Opcao selecionada: Cadastrar Cliente");
-        } else {
-            System.out.println("Opcao inválida");
         }
     }
 }

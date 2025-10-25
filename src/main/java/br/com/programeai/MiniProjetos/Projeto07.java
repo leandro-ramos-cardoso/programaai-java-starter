@@ -18,16 +18,21 @@ public class Projeto07 {
         System.out.println("Selecione uma opção: ");
         int opcao = input.nextInt();
 
-        if(opcao == 1) {
-            System.out.println("Opcao selecionada: Agendar exames");
-        } else if (opcao == 2) {
-            System.out.println("Opcao selecionada: Receber resultados exames");
-        } else if (opcao == 3) {
-            System.out.println("Opcao selecionada: Emitir guia de exame");
-        } else if (opcao == 4) {
-            System.out.println("Opcao selecionada: Atendimento prioritário");
-        } else {
-            System.out.println("Opcao invalida");
+        switch (opcao) {
+            case 1:
+                System.out.println("Opcao selecionada: Agendar exames");
+                break;
+            case 2:
+                System.out.println("Opcao selecionada: Receber resultados exames");
+                break;
+            case 3:
+                System.out.println("Opcao selecionada: Emitir guia de exame");
+                break;
+            case 4:
+                System.out.println("Opcao selecionada: Atendimento prioritário");
+                break;
+            default:
+                System.out.println("Opcao invalida");
         }
     }
 }
